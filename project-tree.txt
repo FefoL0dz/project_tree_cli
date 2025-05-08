@@ -60,40 +60,6 @@
 ├── bin
 │   ├── git_tree.dart
 ├── dependencies.txt
-├── digraph G {
-│   ├── "bin
-│   │   ├── git_tree.dart" -> "package:args
-│   │   │   ├── args.dart";
-│   │   ├── git_tree.dart" -> "package:git_tree_cli
-│   │   │   ├── git_tree_cli.dart";
-│   ├── "lib
-│   │   ├── git_tree_cli.dart" -> "git_tree_cli.dart";
-│   │   ├── git_tree_cli.dart" -> "src
-│   │   │   ├── configuration.dart";
-│   │   ├── src
-│   │   │   ├── configuration.dart" -> "package:glob
-│   │   │   │   ├── glob.dart";
-│   │   │   ├── configuration.dart" -> "package:yaml
-│   │   │   │   ├── yaml.dart";
-│   │   │   ├── dependency_analyzer.dart" -> "configuration.dart";
-│   │   │   ├── dependency_analyzer.dart" -> "package:analyzer
-│   │   │   │   ├── dart
-│   │   │   │   │   ├── analysis
-│   │   │   │   │   │   ├── utilities.dart";
-│   │   │   │   │   ├── ast
-│   │   │   │   │   │   ├── ast.dart";
-│   │   │   ├── dependency_analyzer.dart" -> "package:path
-│   │   │   │   ├── path.dart";
-│   │   │   ├── manifest_parser.dart" -> "package:yaml
-│   │   │   │   ├── yaml.dart";
-│   │   │   ├── scaffold_generator.dart" -> "configuration.dart";
-│   │   │   ├── scaffold_generator.dart" -> "package:path
-│   │   │   │   ├── path.dart";
-│   │   │   ├── tree_printer.dart" -> "configuration.dart";
-│   │   │   ├── tree_printer.dart" -> "package:glob
-│   │   │   │   ├── glob.dart";
-│   │   │   ├── tree_printer.dart" -> "package:path
-│   │   │   │   ├── path.dart";
 ├── git_tree.yaml
 ├── ios
 │   ├── .gitignore
@@ -255,4 +221,3 @@
 │   │   ├── utils.h
 │   │   ├── win32_window.cpp
 │   │   ├── win32_window.h
-├── }
