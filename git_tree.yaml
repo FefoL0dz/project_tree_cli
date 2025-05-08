@@ -1,0 +1,9 @@
+root: .
+ignore:
+  - '.dart_tool/**'
+  - 'build/**'
+  - '**/*.g.dart'
+output: project-tree.txt
+manifest: project-tree.txt
+format: ascii
+indent: 2

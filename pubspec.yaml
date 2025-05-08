@@ -1,0 +1,23 @@
+name: git_tree_cli
+description: A CLI and library to print Dart/Flutter project trees, analyze dependencies, and scaffold from a manifest.
+version: 0.1.0
+homepage: https://github.com/FefoL0dz/git_tree_cli
+repository: https://github.com/FefoL0dz/git_tree_cli
+documentation: https://pub.dev/documentation/git_tree_cli/latest/
+issue_tracker: https://github.com/FefoL0dz/git_tree_cli/issues
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  args: ^2.0.0
+  yaml: ^3.1.0
+  glob: ^2.0.2
+  path: ^1.8.0
+  analyzer: ^5.0.0
+
+dev_dependencies:
+  test: ^1.16.0
+
+executables:
+  git_tree: bin/git_tree.dart

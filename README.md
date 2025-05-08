@@ -16,7 +16,7 @@ Package to generate classes from the project tree or project tree from classes
 1. **Clone or include as a dependency**
 
    ```bash
-   git clone https://github.com/yourusername/git_tree_cli.git
+   git clone https://github.com/FefoL0dz/git_tree_cli.git
    cd git_tree_cli
    ```
 
