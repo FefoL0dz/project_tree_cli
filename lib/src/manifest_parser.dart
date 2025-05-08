@@ -26,10 +26,13 @@ class AsciiTreeParser implements ManifestParser {
     final levels = [0];
     for (var line in text.split('\n')) {
       if (line.trim().isEmpty) continue;
-      final stripped = line.replaceFirst(_pattern, (m) {
-        final spaces = m[0]!.split('').where((c) => c == ' ').length;
+      final stripped = line.replaceFirstMapped(_pattern, (m) {
+        final spaces = m[0]!
+            .split('')
+            .where((c) => c == ' ')
+            .length;
         return ' ' * spaces;
-      } as String);
+      });
       final depth = ((stripped.length - stripped.trimLeft().length) / indentSize).floor();
       final name = stripped.trim();
       while (depth < levels.last) {
