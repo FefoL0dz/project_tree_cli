@@ -14,6 +14,8 @@ class GitTreeCLI {
     final config = await c.Configuration.load();
     final printer = TreePrinter(config);
     printer.printTree(config.rootPath);
+    final treeOutput = config.treeOutput;
+    if (treeOutput != null) await printer.saveToFile(treeOutput);
     if (config.outputPath != null) {
       await printer.saveToFile(config.outputPath!);
     }
@@ -24,6 +26,8 @@ class GitTreeCLI {
     final analyzer = DependencyAnalyzer(config);
     final graph = await analyzer.buildGraph();
     analyzer.printGraph(graph);
+    final depsOutput = config.depsOutput;
+    if (depsOutput != null) await analyzer.saveGraph(depsOutput);
     if (config.outputPath != null) {
       await analyzer.saveGraph(config.outputPath!);
     }

@@ -1,0 +1,18 @@
+digraph G {
+  "bin/git_tree.dart" -> "package:args/args.dart";
+  "bin/git_tree.dart" -> "package:git_tree_cli/git_tree_cli.dart";
+  "lib/git_tree_cli.dart" -> "src/configuration.dart";
+  "lib/git_tree_cli.dart" -> "git_tree_cli.dart";
+  "lib/src/dependency_analyzer.dart" -> "package:analyzer/dart/analysis/utilities.dart";
+  "lib/src/dependency_analyzer.dart" -> "package:analyzer/dart/ast/ast.dart";
+  "lib/src/dependency_analyzer.dart" -> "package:path/path.dart";
+  "lib/src/dependency_analyzer.dart" -> "configuration.dart";
+  "lib/src/tree_printer.dart" -> "package:glob/glob.dart";
+  "lib/src/tree_printer.dart" -> "package:path/path.dart";
+  "lib/src/tree_printer.dart" -> "configuration.dart";
+  "lib/src/manifest_parser.dart" -> "package:yaml/yaml.dart";
+  "lib/src/configuration.dart" -> "package:yaml/yaml.dart";
+  "lib/src/configuration.dart" -> "package:glob/glob.dart";
+  "lib/src/scaffold_generator.dart" -> "package:path/path.dart";
+  "lib/src/scaffold_generator.dart" -> "configuration.dart";
+}

@@ -6,6 +6,8 @@ class Configuration {
   final String rootPath;
   final List<Glob> ignorePatterns;
   final String? outputPath;
+  final String? depsOutput;
+  final String? treeOutput;
   final String manifestPath;
   final String format;
   final int indent;
@@ -17,6 +19,8 @@ class Configuration {
       this.manifestPath,
       this.format,
       this.indent,
+      this.depsOutput,
+      this.treeOutput,
       );
 
   static Future<Configuration> load() async {
@@ -29,6 +33,8 @@ class Configuration {
     final ignores = (doc['ignore'] as List?)?.cast<String>() ?? [];
     final patterns = ignores.map((p) => Glob(p)).toList();
     final output = doc['output'] as String?;
+    final depsOutput = doc['deps_output'] as String?;
+    final treeOutput = doc['tree_output'] as String?;
     final manifest = doc['manifest'] as String? ?? 'project-tree.txt';
     final format = doc['format'] as String?
         ?? (manifest.endsWith('.yaml') ? 'yaml' : 'ascii');
@@ -40,6 +46,8 @@ class Configuration {
       manifest,
       format,
       indent,
+      depsOutput,
+      treeOutput,
     );
   }
 }
