@@ -35,6 +35,7 @@ class AsciiTreeParser implements ManifestParser {
       });
       final depth = ((stripped.length - stripped.trimLeft().length) / indentSize).floor();
       final name = stripped.trim();
+      if (name.isEmpty) continue;
       while (depth < levels.last) {
         stack.removeLast(); levels.removeLast();
       }
